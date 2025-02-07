@@ -1,14 +1,3 @@
-# 📌 อธิบายแต่ละส่วนของโครงสร้าง Next.js + Clean Architecture
-
-โครงสร้างนี้ออกแบบมาให้ **แยกเลเยอร์ชัดเจน** ตามหลัก **Clean Architecture** โดยแบ่งเป็น 4 เลเยอร์หลัก:
-
-1. **Presentation Layer (UI)**
-2. **Application Layer (Business Logic / Use Cases)**
-3. **Domain Layer (Core Business / Entities & Repositories)**
-4. **Infrastructure Layer (Data Sources & External Services)**
-
----
-
 ## 📂 0. App Router Routing
 
 **📌 ทำหน้าที่:** จัดการ **Route สำหรับในการทำหน้าโดยใช้ folder structure** ตามหลัก app router nextjs
@@ -130,34 +119,3 @@
 | `routing.ts` | **Config สำหรับ i18n**                        |
 
 ---
-
-## 🎯 สรุป
-
-### ✅ Clean Architecture ชัดเจน
-
-✔ แยก UI (`presentation/`) ออกจาก Business Logic (`application/`)  
-✔ Domain (`domain/`) เป็นศูนย์กลางของระบบ ไม่พึ่ง API หรือ UI  
-✔ Infrastructure (`infrastructure/`) ทำหน้าที่เชื่อมกับ API หรือ Storage
-
-### ✅ ข้อดีของโครงสร้างนี้
-
-✔ **อ่านง่าย** → แยกโค้ดออกเป็นส่วน ๆ ตามหน้าที่  
-✔ **ดูแลง่าย** → เปลี่ยน API หรือ State Management ได้ง่าย  
-✔ **Test ได้ง่าย** → แต่ละ Layer สามารถ Test แยกกันได้  
-✔ **ขยายต่อได้ง่าย** → รองรับการเพิ่ม Feature ใหม่โดยไม่ต้อง Refactor เยอะ
-
----
-
-## 🚀 Next Steps
-
-1️⃣ **ติดตั้งโปรเจกต์**
-
-```sh
-npm install
-npm run dev
-```
-
-2️⃣ **เริ่มพัฒนา API & Features เพิ่มเติม**  
-3️⃣ **เพิ่มระบบ Auth (JWT, OAuth) หรือ Multi-language ถ้าจำเป็น**
-
-🔥 **พร้อมใช้งาน! ถ้ามีอะไรให้ปรับเพิ่ม บอกได้เลย!** 😃🚀
